@@ -1,0 +1,717 @@
+
+body {
+  margin: 0;
+  min-height: auto;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  background-color: red;
+  background-color: black;
+  min-height: 100vh;
+  /* overflow-x: hidden; */
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /* background-color: rgba(0, 0, 0, 0.6);
+   */
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  height: 15vh;
+  box-shadow: 0.2px 0.2px 4px whitesmoke;
+  display: flex;
+  font-size: 18px;
+  color: wheat;
+}
+/* header icon */
+.header > div:first-child {
+  /* background-color: white; */
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+.header > div:first-child > div {
+  border: 1px solid;
+  animation: infinite moving 0.5s;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+}
+/* //header navigation */
+.header > div ~ div {
+  /* background-color: grey; */
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+/* //each header naviagtion element */
+.header > div ~ div > a {
+  color: wheat;
+  text-decoration: none;
+}
+
+.header > div ~ div > a:hover {
+  border-bottom: 3px solid wheat;
+  color: white;
+  padding-bottom: 3px;
+  cursor: url("./assets/anchor.svg") 1 1, pointer;
+}
+.about {
+  background-color: black;
+  color: wheat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  box-shadow: 0.2px 0.2px 4px whitesmoke;
+}
+
+@keyframes moveUp {
+  from {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.about > div {
+  animation: moveUp 0.8s ease-out forwards;
+  padding: 10px;
+  height: 60vh;
+  /* border: 1px solid; */
+  width: 40%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.about > div:first-child {
+  /* background-color: lightblue; */
+  display: flex;
+  flex-direction: column;
+}
+.about > div ~ div {
+  box-shadow: 0.2px 0.2px 4px whitesmoke;
+  height: 90%;
+}
+.about > div ~ div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+
+  /* animation: infinite moving 0.5s; */
+}
+@keyframes moving {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* .experience {
+  background-color: blue;
+  height: 70vh;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: ;
+  grid-template-rows: ;
+} */
+
+.experience {
+  background-color: black;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  color: wheat;
+  box-shadow: 0.2px 0.2px 4px whitesmoke;
+}
+.experience > div:first-child {
+  width: 100%;
+  height: 15vh;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: black;
+  color: wheat;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  width: 80%;
+  max-width: 1000px;
+  margin-top: 30px;
+}
+
+.grid-container div {
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  font-size: 18px;
+  /* border: 1px solid rgba(245, 222, 179, 0.3); */
+  box-shadow: 0 2px 8px rgba(245, 222, 179, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+.grid-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  gap: 10px;
+  /* animation: infinite moving 0.5s; */
+}
+.grid-container div:hover {
+  transform: translateY(-6px);
+  border-color: wheat;
+  box-shadow: 0 4px 12px rgba(245, 222, 179, 0.3);
+  cursor: url("./assets/anchor.svg") 1 1, pointer;
+  /* animation: forwards shake 0.5s; */
+  /* animation: infinite moving 0.5s; */
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* //try not to forget to add the profile pic animation and the animation for the experience and stuff */
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+.project-content > div:first-child {
+  width: 100%;
+  height: 15vh;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: black;
+  color: wheat;
+  /* border: 1px solid whitesmoke; */
+
+  /* box-shadow: 0px 0px 13px whitesmoke; */
+}
+.main {
+  min-height: 80vh;
+  background-color: black;
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+/* .main > div {
+} */
+.project-description {
+  width: 40%;
+  min-height: 50vh;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  /* overflow: auto; */
+  padding: 10px;
+  /* border: 1px solid; */
+  width: 40%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* border: 1px solid rgba(245, 222, 179, 0.3);
+  box-shadow: 0 2px 8px rgba(245, 222, 179, 0.15); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+.project-image {
+  width: 40%;
+  /* background-color: aliceblue; */
+  height: 70vh;
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(245, 222, 179, 0.3);
+  box-shadow: 0 2px 8px rgba(245, 222, 179, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+.project-image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  cursor: not-allowed;
+}
+
+.project-btn {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  justify-content: space-around;
+  padding-bottom: 10px;
+  margin-top: 15px;
+}
+.project-btn > a {
+  background-color: wheat;
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  border: none;
+  height: 40px;
+  width: 30%;
+  font-size: 16px;
+  font-weight: bold;
+  /* border: 1px solid rgba(245, 222, 179, 0.3); */
+  box-shadow: 0px 0px 5px whitesmoke;
+  transition: 0.3s;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url("./assets/anchor.svg") 1 1, pointer;
+}
+.project-btn > a:hover {
+  scale: 1.2;
+}
+.project-btn > a:active {
+  scale: 1;
+}
+
+.footer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  gap: 20px;
+  background-color: wheat;
+}
+
+.footer-icon {
+  margin-bottom: 10px;
+  height: 120px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: infinite moving 0.5s;
+  cursor: url("./assets/anchor.svg") 1 1, pointer;
+}
+.footer-motive {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+  margin: 30px;
+}
+.footer-links > div {
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px whitesmoke;
+  height: 55px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url("./assets/anchor.svg") 1 1, pointer;
+}
+.footer-links > div > a > img {
+  height: 35px;
+  width: 35px;
+  cursor: url("./assets/anchor.svg") 1 1, pointer;
+}
+.footer > div:last-child {
+  gap: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.footer > div:last-child > img {
+  height: 25px;
+  width: 25px;
+}
+.dark-mode-div {
+  height: 50px;
+  box-shadow: 0px 0px 5px whitesmoke;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: url("./assets/anchor.svg") 1 1, pointer;
+  background-color: black;
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  will-change: opacity, transform;
+}
+
+.scroll-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: fadeInLeft 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  will-change: opacity, transform;
+}
+
+.scroll-off {
+  opacity: 0;
+  animation: fadeOut 0.8s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 50%, exit 50% cover 100%;
+  will-change: opacity, transform;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.scroll-right {
+  opacity: 0;
+  transform: translateX(100px);
+  animation: fadeInRight 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  will-change: opacity, transform;
+}
+
+.scroll-fade {
+  opacity: 0;
+  animation: fadeOnly 0.8s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 10% cover 40%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOnly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*  LIGHT MODE STYLES */
+body.light-mode .app {
+  background-color: white;
+  color: black;
+}
+
+/* HEADER */
+body.light-mode .header {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+body.light-mode .header > div ~ div > a {
+  color: black;
+}
+body.light-mode .header > div ~ div > a:hover {
+  border-bottom: 3px solid black;
+}
+/* DARK/LIGHT TOGGLE BUTTON */
+body.light-mode .dark-mode-div {
+  box-shadow: 0px 0px 5px black;
+  background-color: white;
+  color: white;
+}
+
+/* ABOUT SECTION */
+body.light-mode .about {
+  background-color: white;
+  color: black;
+  box-shadow: 0.2px 0.2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* EXPERIENCE SECTION */
+body.light-mode .experience {
+  background-color: white;
+  color: black;
+}
+body.light-mode .experience > div:first-child {
+  background-color: white;
+  color: black;
+}
+body.light-mode .grid-container div {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+body.light-mode .grid-container div:hover {
+  border-color: black;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* PROJECT SECTION */
+body.light-mode .project-content > div:first-child,
+body.light-mode .main {
+  background-color: white;
+  color: black;
+}
+body.light-mode .project-description {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: black;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+body.light-mode .project-image {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+body.light-mode .project-btn > a {
+  background-color: black;
+  color: white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+body.light-mode .project-btn > a:hover {
+  transform: scale(1.1);
+}
+
+/* KEEP FOOTER SAME! */
+body.light-mode .footer {
+  background-color: grey;
+  color: whitesmoke;
+  border-top: 1px solid;
+}
+
+/* //media queries */
+
+/* responsiveness for tablets */
+@media (max-width: 1024px) {
+  /* adjust header */
+  .header {
+    font-size: 16px;
+    height: 12vh;
+  }
+  .header > div:first-child {
+    width: 50%;
+    padding-left: 30px;
+  }
+  .header > div ~ div {
+    width: 50%;
+    justify-content: space-evenly;
+  }
+
+  /* about layout */
+  .about {
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+  }
+  .about > div {
+    width: 80%;
+    height: auto;
+    text-align: center;
+  }
+
+  /* project section */
+  .main {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .project-description,
+  .project-image {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* responsiveness for mobile devices */
+@media (max-width: 768px) {
+  /* header adjustments */
+  .header {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .header > div:first-child,
+  .header > div ~ div {
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+  }
+  .header > div ~ div > a {
+    padding: 10px;
+  }
+
+  /* about section on mobile */
+  .about {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .about > div {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  /* experience section grid */
+  .grid-container {
+    width: 100%;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  /* projects section */
+  .project-description,
+  .project-image {
+    width: 100%;
+  }
+  .project-btn {
+    flex-direction: column;
+    gap: 10px;
+    min-height: 80px;
+  }
+  .project-btn > a {
+    width: 80%;
+  }
+
+  /* footer section */
+  .footer {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+
+/* extra small phones */
+@media (max-width: 480px) {
+  .header {
+    font-size: 14px;
+  }
+  .app {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .project-btn > a {
+    min-height: 30px;
+    font-size: 18px;
+    width: 90%;
+  }
+  .project-btn {
+    margin: 30px;
+  }
+  .header,
+  .about,
+  .experience,
+  .main,
+  .footer {
+    width: 100%;
+    max-width: 100vw;
+  }
+  .about > div {
+    font-size: 16px;
+  }
+  .experience > div:first-child,
+  .project-content > div:first-child {
+    font-size: 28px;
+  }
+  .project-description {
+    font-size: 16px;
+  }
+  .footer {
+    font-size: 14px;
+  }
+  .dark-mode-div {
+    height: 34px;
+    width: 34px;
+    margin: 2px;
+  }
+}

@@ -682,8 +682,13 @@ body.light-mode .footer {
   .about > div {
     width: 100%;
     font-size: 18px;
+    gap: 20px;
   }
-
+  .about > div > h3 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
   /* experience section grid */
   .grid-container {
     width: 100%;

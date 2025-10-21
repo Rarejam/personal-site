@@ -1,17 +1,18 @@
-import reactIcon from "../assets/react.svg";
-import twitterIcon from "../assets/twitter.svg";
+import reactIcon from "../assets/vite.svg";
+// import twitterIcon from "../assets/twitter.svg";
 import instaIcon from "../assets/instagram.svg";
-// import whatsappIcon from "../assets/whatsapp.svg";
+import whatsappIcon from "../assets/whatsapp.svg";
 import discordIcon from "../assets/discord.svg";
 import googleIcon from "../assets/google.svg";
 import githubIcon from "../assets/github.svg";
+import profilePic from "../assets/profilePic.jpg";
 
 const Footer = () => {
   return (
     <div className="footer" id="contact">
       <div className="footer-icon scroll-animate">
         {" "}
-        <img src={reactIcon} alt="React" height="60" />
+        <img src={profilePic} alt={reactIcon} height="60" />
       </div>
       <div className="footer-motive ">
         <div>Living, learning, & leveling up </div>
@@ -19,16 +20,17 @@ const Footer = () => {
       </div>
       <div className="footer-links">
         <div>
-          <a href="">
-            <img src={twitterIcon} alt="React" height="60" />
+          <a href="https://wa.me/2348187017194">
+            <img src={whatsappIcon} alt="React" height="60" />
           </a>
         </div>
         <div>
-          <a href="">
+          <a href="https://github.com/Rarejam/personal-site">
             <img src={githubIcon} alt="React" height="60" />
           </a>
         </div>
         <div>
+          {/* the mailto:example@gmail.com is going to open a main automatically with yr gmail for the user */}
           <a href="mailto:agarajamaldeen@gmail.com">
             <img src={googleIcon} alt="React" height="60" />
           </a>
@@ -49,7 +51,7 @@ const Footer = () => {
       <div>
         Made with
         <img src={reactIcon} alt="React" height="60" />
-        react
+        react/vite
       </div>
     </div>
   );

@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
 import reactIcon from "../assets/react.svg";
+import profilePic from "../assets/profilePic.jpg";
 
 const Header = () => {
   const [lightMode, setLightMode] = useState(false);
 
-  // Load saved preference
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "light") {
       document.body.classList.add("light-mode");
       setLightMode(true);
+    } else {
+      document.body.classList.add("dark-mode");
+      setLightMode(false);
     }
   }, []);
 
@@ -19,8 +22,12 @@ const Header = () => {
 
     if (!lightMode) {
       localStorage.setItem("theme", "light");
+      document.body.classList.remove("dark-mode");
+      document.body.classList.add("light-mode");
     } else {
       localStorage.setItem("theme", "dark");
+      document.body.classList.remove("light-mode");
+      document.body.classList.add("dark-mode");
     }
   };
 
@@ -28,7 +35,7 @@ const Header = () => {
     <div className="header">
       <div>
         <div>
-          <img src={reactIcon} alt="" />
+          <img src={profilePic} alt={reactIcon} />
         </div>
       </div>
       <div>

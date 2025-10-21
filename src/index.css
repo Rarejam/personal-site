@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   min-height: auto;
@@ -14,7 +13,6 @@ html {
   box-sizing: border-box;
 }
 .app {
-  background-color: red;
   background-color: black;
   min-height: 100vh;
   /* overflow-x: hidden; */
@@ -34,6 +32,7 @@ html {
   font-size: 18px;
   color: wheat;
 }
+
 /* header icon */
 .header > div:first-child {
   /* background-color: white; */
@@ -50,7 +49,14 @@ html {
   width: 60px;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0.2px 0.2px 12px whitesmoke;
+}
+.header > div:first-child > div > img {
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
 }
 /* //header navigation */
@@ -75,7 +81,8 @@ html {
   cursor: url("./assets/anchor.svg") 1 1, pointer;
 }
 .about {
-  background-color: black;
+  /* background-color: black; */
+
   color: wheat;
   min-height: 100vh;
   display: flex;
@@ -100,7 +107,10 @@ html {
 .about > div {
   animation: moveUp 0.8s ease-out forwards;
   padding: 10px;
-  height: 60vh;
+  min-height: 60vh;
+  height: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
   /* border: 1px solid; */
   width: 40%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -109,10 +119,18 @@ html {
   display: flex;
   align-items: center;
 }
+body.dark-mode .about {
+  background-image: url("./assets/space.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .about > div:first-child {
   /* background-color: lightblue; */
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  overflow: visible;
 }
 .about > div ~ div {
   box-shadow: 0.2px 0.2px 4px whitesmoke;
@@ -148,7 +166,8 @@ html {
 } */
 
 .experience {
-  background-color: black;
+  /* background-color: black; */
+
   min-height: 70vh;
   display: flex;
   flex-direction: column;
@@ -158,6 +177,12 @@ html {
   color: wheat;
   box-shadow: 0.2px 0.2px 4px whitesmoke;
 }
+body.dark-mode .experience {
+  background-image: url("./assets/space.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .experience > div:first-child {
   width: 100%;
   height: 15vh;
@@ -166,7 +191,7 @@ html {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  background-color: black;
+  /* background-color: black; */
   color: wheat;
 }
 .grid-container {
@@ -199,6 +224,9 @@ html {
   font-size: 24px;
   gap: 10px;
   /* animation: infinite moving 0.5s; */
+}
+.grid-container > div > img {
+  margin: 10px;
 }
 .grid-container div:hover {
   transform: translateY(-6px);
@@ -267,7 +295,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  gap: 10px;
   /* border: 1px solid rgba(245, 222, 179, 0.3);
   box-shadow: 0 2px 8px rgba(245, 222, 179, 0.15); */
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
@@ -275,7 +303,7 @@ html {
 .project-image {
   width: 40%;
   /* background-color: aliceblue; */
-  height: 70vh;
+  height: 50vh;
   backdrop-filter: blur(6px);
 
   border: 1px solid rgba(245, 222, 179, 0.3);
@@ -315,6 +343,7 @@ html {
   justify-content: center;
   align-items: center;
   cursor: url("./assets/anchor.svg") 1 1, pointer;
+  text-decoration: none;
 }
 .project-btn > a:hover {
   scale: 1.2;
@@ -331,18 +360,32 @@ html {
   justify-content: center;
   font-size: 20px;
   gap: 20px;
-  background-color: wheat;
+  /* background-color: wheat; */
+
+  background-image: url("./assets/shooting-star.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
 }
 
 .footer-icon {
   margin-bottom: 10px;
-  height: 120px;
-  width: 120px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: infinite moving 0.5s;
+  box-shadow: 0.2px 0.2px 12px whitesmoke;
   cursor: url("./assets/anchor.svg") 1 1, pointer;
+}
+.footer-icon > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
 }
 .footer-motive {
   font-size: 24px;
@@ -408,7 +451,7 @@ html {
   transform: translateX(-100px);
   animation: fadeInLeft 0.8s ease-out forwards;
   animation-timeline: view();
-  animation-range: entry 0% cover 30%;
+  animation-range: entry 0% cover 50%;
   will-change: opacity, transform;
 }
 
@@ -436,7 +479,7 @@ html {
   transform: translateX(100px);
   animation: fadeInRight 0.8s ease-out forwards;
   animation-timeline: view();
-  animation-range: entry 0% cover 30%;
+  animation-range: entry 0% cover 50%;
   will-change: opacity, transform;
 }
 

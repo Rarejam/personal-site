@@ -708,7 +708,9 @@ body.light-mode .footer {
   .project-btn > a {
     width: 80%;
   }
-
+  .main {
+    box-shadow: 0px 0px 10px whitesmoke;
+  }
   /* footer section */
   .footer {
     font-size: 16px;
@@ -716,6 +718,15 @@ body.light-mode .footer {
   }
   .grid-container > div {
     font-size: 16px;
+  }
+  .project-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* margin: 0 auto; */
+  }
+  .project-btn > a {
+    width: 60%;
   }
 }
 
@@ -729,7 +740,9 @@ body.light-mode .footer {
     max-width: 100vw;
     overflow-x: hidden;
   }
-
+  .main {
+    box-shadow: 0px 0px 10px whitesmoke;
+  }
   .project-btn > a {
     min-height: 30px;
     font-size: 18px;
@@ -766,5 +779,35 @@ body.light-mode .footer {
   }
   .grid-container > div {
     font-size: 16px;
+  }
+  .project-btn {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .project-btn > a {
+    width: 60%;
+  }
+
+  .scroll-left,
+  .scroll-right {
+    opacity: 0;
+    transform: translateY(40px);
+    animation-name: fadeUp;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    will-change: opacity, transform;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

@@ -47,11 +47,11 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="copyrights">Handcrafted by me @twentytwentyfive</div>
+      <div className="copyrights">Handcrafted by me © 2025</div>
       <div>
         Made with
         <img src={reactIcon} alt="React" height="60" />
-        react/vite
+        react
       </div>
     </div>
   );

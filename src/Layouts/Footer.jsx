@@ -1,7 +1,7 @@
 import reactIcon from "../assets/vite.svg";
 // import twitterIcon from "../assets/twitter.svg";
 import instaIcon from "../assets/instagram.svg";
-import whatsappIcon from "../assets/whatsapp.svg";
+import LinkedInIcon from "../assets/LinkedInIcon.svg";
 import discordIcon from "../assets/discord.svg";
 import googleIcon from "../assets/google.svg";
 import githubIcon from "../assets/github.svg";
@@ -20,8 +20,8 @@ const Footer = () => {
       </div>
       <div className="footer-links">
         <div>
-          <a href="https://wa.me/2348187017194">
-            <img src={whatsappIcon} alt="React" height="60" />
+          <a href="https://www.linkedin.com/in/jamaldeen-agara-ba003233b/">
+            <img src={LinkedInIcon} alt="React" height="60" />
           </a>
         </div>
         <div>

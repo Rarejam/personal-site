@@ -24,7 +24,7 @@ const About = () => {
         </p>
         <div className="project-btn">
           <a href="https://github.com/Rarejam">Github</a>
-          <a>Resume</a>
+          <a href="https://flowcv.com/resume/6rfphcgrodds">Résumé</a>
         </div>
       </div>
       <div>
